@@ -1,0 +1,36 @@
+body {
+    font-family: 'Arial', sans-serif; /* A simple, widely available font */
+    background-color: #f8f0e3; /* A soft cream background */
+    color: #333; /* Dark gray text */
+    margin: 0; /* Remove default margins */
+    padding: 20px;
+    line-height: 1.6; /* Improves readability */
+}
+
+h1 {
+    color: #a44a3f; /* A warm brown heading color */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+}
+
+.cool-button {
+    background-color: #a44a3f; /* Warm brown button */
+    color: white;
+    padding: 12px 24px; /* Slightly larger padding */
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform transition */
+    display: block;
+    margin: 0 auto;
+}
+
+.cool-button:hover {
+    background-color: #8c3a32; /* Darker brown on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+}
