@@ -1,15 +1,27 @@
+:root {
+    --primary-color: #f43f8c; /* Bright Pink */
+    --secondary-color: #9bddff; /* Very Light Blue */
+    --accent-color-1: #0052ff; /* Bright Blue */
+    --accent-color-2: #fd8308; /* Bright Orange */
+    --accent-color-3: #0bc95f; /* Bright Green */
+    --off-white: #fffffb; /* Off-white */
+    --pure-white: #ffffff; /* pure White */
+    --light-pink: #fdb7d3;/*light pink*/
+    --text-color: #333; /* Dark gray text */
+}
+
 body {
-    font-family: 'Arial', sans-serif; /* A simple, widely available font */
-    background-color: #f8f0e3; /* A soft cream background */
-    color: #333; /* Dark gray text */
-    margin: 0; /* Remove default margins */
+    font-family: 'Inter Tight', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
     padding: 20px;
-    line-height: 1.6; /* Improves readability */
+    line-height: 1.6;
 }
 
 h1 {
-    color: #a44a3f; /* A warm brown heading color */
-    text-align: center; /* Center the heading */
+    color: var(--primary-color);
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -18,19 +30,19 @@ p {
 }
 
 .cool-button {
-    background-color: #a44a3f; /* Warm brown button */
-    color: white;
-    padding: 12px 24px; /* Slightly larger padding */
+    background-color: var(--primary-color);
+    color: var(--pure-white);
+    padding: 12px 24px;
     border: none;
-    border-radius: 8px; /* More rounded corners */
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform transition */
+    transition: background-color 0.3s ease, transform 0.2s ease;
     display: block;
     margin: 0 auto;
 }
 
 .cool-button:hover {
-    background-color: #8c3a32; /* Darker brown on hover */
-    transform: scale(1.05); /* Slight scale on hover */
+    background-color: #d12a7a; /* A slightly darker pink on hover */
+    transform: scale(1.05);
 }
