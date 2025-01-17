@@ -1,9 +1,7 @@
 @font-face {
-    font-family: 'Hitchut Regular';
-    src: url('fonts/HitchutRegular.woff2') format('woff2'),
-         url('fonts/HitchutRegular.woff') format('woff'),
-         url('fonts/HitchutRegular.ttf') format('truetype'),
-         url('fonts/HitchutRegular.otf') format("opentype");
+    font-family: 'Hitchcut Regular'; /* Font family name (no hyphens) */
+    src: url('fonts/Hitchcut-Regular.woff2') format('woff2'), /* Correct file name */
+         url('fonts/Hitchcut-Regular.woff') format('woff');   /* Correct file name */
     font-weight: normal;
     font-style: normal;
 }
@@ -21,7 +19,7 @@
 }
 
 body {
-    font-family: 'Hitchut Regular', sans-serif; /* Use your custom font here */
+    font-family: 'Hitchcut Regular', sans-serif; /* Correct font-family name */
     background-color: var(--secondary-color);
     color: var(--text-color);
     margin: 0;
@@ -30,7 +28,7 @@ body {
 }
 
 h1 {
-    font-family: 'Hitchut Regular', sans-serif; /* Use your custom font here */
+    font-family: 'Hitchcut Regular', sans-serif; /* Correct font-family name */
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 20px;
