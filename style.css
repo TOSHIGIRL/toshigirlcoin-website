@@ -1,50 +1,36 @@
 /* style.css */
-@font-face {
-    font-family: 'Hitchcut Regular';
-    src: url('fonts/Hitchcut-Regular.woff2') format('woff2'),
-         url('fonts/Hitchcut-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-:root {
-    --primary-color: #f43f8c;
-    --secondary-color: #9bddff;
-    --accent-color-1: #0052ff;
-    --accent-color-2: #fd8308;
-    --accent-color-3: #0bc95f;
-    --off-white: #fffffb;
-    --pure-white: #ffffff;
-    --light-pink: #fdb7d3;
-    --text-color: #333;
-}
+/* ... (your @font-face and :root styles) */
 
 body {
     font-family: 'Hitchcut Regular', sans-serif;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: #008000;
+    color: white;
     margin: 0;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
-/* Header styles */
 header {
-    background-color: var(--primary-color);
-    color: var(--pure-white);
-    padding: 20px 0; /* Top and bottom padding */
+    background-color: transparent;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-.container {
-    max-width: 960px;
+.header-content {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Left and right padding */
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    max-height: 80px; /* Increased logo size */
+    max-height: 100px;
 }
 
 nav ul {
@@ -60,60 +46,51 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: var(--pure-white);
-    font-weight: bold; /* Make nav links bolder */
-    transition: color 0.3s ease; /* Smooth hover effect */
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--accent-color-2); /* Change color on hover */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-color: #FFFF00;
+    transform: scale(1.1);
 }
-/*Hero Section*/
+
 #hero {
-  text-align: center;
-  padding: 100px 0;
-}
-h1 {
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-p {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative; /* Needed for absolute positioning of hero text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.cool-button {
-    background-color: var(--primary-color);
-    color: var(--pure-white);
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: block;
-    margin: 0 auto;
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place image behind content */
 }
 
-.cool-button:hover {
-    background-color: #d12a7a;
-    transform: scale(1.05);
-}
-/*Tokenomics and Roadmap sections*/
-#tokenomics, #roadmap {
-    padding: 40px;
-    margin-bottom: 20px;
+.hero-text {
     text-align: center;
+    color: white;
+    z-index: 1; /* Ensure text is above image */
 }
-#roadmap ul{
-  list-style-type: disc;
-  display: inline-block;
-  text-align: left;
+.hero-text h1{
+  font-size: 4em;
 }
+
+/* ... (rest of your CSS) */
 footer {
     text-align: center;
     padding: 20px 0;
