@@ -7,17 +7,17 @@ body {
     color: white;
     margin: 0;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 header {
     background-color: transparent;
     padding: 20px 0;
-    position: absolute;
+    position: absolute; /* Keep absolute positioning */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 2; /* Increased z-index */
 }
 
 .header-content {
@@ -65,7 +65,7 @@ nav a:hover {
 #hero {
     height: 100vh;
     overflow: hidden;
-    position: relative; /* Needed for absolute positioning of hero text */
+    position: relative; /* This is crucial! */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,19 +78,17 @@ nav a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Place image behind content */
+    z-index: 1; /* Image is now above the hero text */
 }
 
 .hero-text {
     text-align: center;
     color: white;
-    z-index: 1; /* Ensure text is above image */
+    z-index: 2; /* Text is above the image */
 }
 .hero-text h1{
   font-size: 4em;
 }
-
-/* ... (rest of your CSS) */
 footer {
     text-align: center;
     padding: 20px 0;
